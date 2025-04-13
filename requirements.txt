@@ -1,0 +1,12 @@
+nba_api
+pandas
+scikit-learn
+xgboost
+sqlalchemy
+redis
+py-algorand-sdk
+discord.py
+flask
+nba_api
+python-dotenv
+python-dotenv

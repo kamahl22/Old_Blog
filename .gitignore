@@ -172,3 +172,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+venv/
+__pycache__/
+*.pyc
+*.db
+models/nba/*.pkl
+data/raw/
+data/processed/
+data/features/
+.env
+.env
