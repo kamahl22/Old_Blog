@@ -27,4 +27,8 @@ async def predict(ctx, team1: str, team2: str):
     else:
         await ctx.send(f"{team1} vs {team2}: {result['winner']} ({result['confidence']*100:.1f}%)")
 
-bot.run(os.getenv("DISCORD_TOKEN"))
+# Validate token
+token = os.getenv("DISCORD_TOKEN")
+if token is None:
+    raise ValueError("DISCORD_TOKEN not found in .env")
+bot.run(token)
