@@ -1,0 +1,63 @@
+BLOG/
+├── data/
+│   ├── raw/               # Raw API data
+│   │   └── nba/          # e.g., games_2023.csv, players_2023.csv
+│   ├── processed/        # Cleaned, aggregated data
+│   │   └── nba/          # e.g., team_stats_2023.csv
+│   └── features/         # Engineered features for ML
+│       └── nba/          # e.g., suns_vs_lakers_features.pkl
+├── src/
+│   ├── blockchain/       # Algorand integration
+│   │   ├── __init__.py
+│   │   ├── wallet.py     # User wallet management
+│   │   ├── betting.py    # Smart contract for bets
+│   │   └── token.py      # BLOG token logic
+│   ├── data_collection/
+│   │   ├── __init__.py
+│   │   ├── base_collector.py
+│   │   └── nba_collector.py  # Uses nba_api
+│   ├── data_processing/
+│   │   ├── __init__.py
+│   │   ├── base_processor.py
+│   │   └── nba_processor.py  # Feature engineering
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── base_model.py
+│   │   └── nba_models/
+│   │       ├── game_outcome.py
+│   │       └── player_prop.py
+│   ├── prediction_engine/
+│   │   ├── __init__.py
+│   │   └── engine.py     # Coordinates predictions
+│   ├── chatbot/
+│   │   ├── __init__.py
+│   │   ├── nlp.py        # Query parsing
+│   │   ├── discord_bot.py  # Your existing bot
+│   │   ├── web_interface.py
+│   │   └── mobile_interface.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── logging.py
+│       ├── config.py
+│       └── db.py        # SQLite/Redis helpers
+├── scripts/
+│   ├── collect_nba_data.py   # Fetch and store historical data
+│   ├── process_data.py       # Generate features
+│   ├── train_models.py       # Train ML models
+│   ├── run_chatbot.py        # Launch bot (Discord, web, mobile)
+│   └── test_betting.py       # Test Algorand betting
+├── tests/
+│   ├── test_collection.py
+│   ├── test_processing.py
+│   ├── test_models.py
+│   └── test_chatbot.py
+├── config/
+│   ├── config.yaml       # API keys, DB paths
+│   └── nba_config.yaml   # NBA-specific settings
+├── models/
+│   └── nba/              # Trained model files
+│       ├── game_outcome.pkl
+│       └── player_prop.pkl
+├── requirements.txt
+├── README.md
+└── .gitignore

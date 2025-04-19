@@ -1,0 +1,12 @@
+blog_project/
+├── docs/                   # New folder
+│   ├── tokenomics.md     # Tokenomics plan
+│   ├── notes/            # Subfolder for misc notes, questions
+│   ├── diagrams/         # Subfolder for visuals (e.g., architecture)
+├── src/
+├── scripts/
+├── data/
+├── .env
+├── .gitignore
+├── requirements.txt
+├── README.md

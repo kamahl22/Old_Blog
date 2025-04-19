@@ -1,0 +1,72 @@
++-------------------------------------------+
+|                NBA Data Source            |
+| (nba_api: Historical games, stats)        |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Data Collection (nba_collector.py)        |
+| - Fetches games (2022-23, 2023-24)        |
+| - Saves to data/raw/nba/games_*.csv       |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Data Storage (db.py)                      |
+| - Loads CSVs into SQLite (data/blog.db)   |
+| - Stores game_id, team, outcome, etc.     |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Data Processing (nba_processor.py)        |
+| - Computes features (e.g., win_pct)       |
+| - Saves to data/processed/nba/team_stats  |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Model Training (game_outcome.py)          |
+| - Trains XGBoost on win_pct               |
+| - Saves model to models/nba/game_outcome  |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Prediction Engine (engine.py)             |
+| - Loads model, predicts game outcomes     |
+| - e.g., "Phoenix Suns, 50% confidence"    |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Discord Bot (discord_bot.py)              |
+| - Runs !predict "Team A" "Team B"         |
+| - Outputs prediction (e.g., "Suns, 50%")  |
+| - NEW: !bot_bet, !back_bet commands       |
+| - Loads DISCORD_TOKEN from .env           |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Algorand Blockchain Layer                 |
+|                                           |
+| +------------------+  +------------------+ |
+| | Wallet (wallet.py)|  | Betting Pool    | |
+| | - Bot wallet     |  | (betting_pool.py)| |
+| | - Address, mnemonic | - Bot bets ALGO | |
+| | - Stored in .env |  | - Users back pool| |
+| +------------------+  +------------------+ |
+|                                           |
+| - Testnet: Records bets as transactions   |
+| - Pool: Bot stakes 10,000 microALGOs      |
+| - Users contribute (e.g., 2,000 microALGOs)|
+| - Winnings split proportionally           |
++-------------------------------------------+
+            |
+            v
++-------------------------------------------+
+| Algorand Testnet (algoexplorer.io)        |
+| - Verifies transactions (bet placement)   |
+| - Tracks pool contributions, payouts      |
++-------------------------------------------+
