@@ -1,0 +1,11 @@
+algokit asset create \
+  --creator MWBQBUKLULK6DWSHCOA4GBDZJFOGRIF7MTO5O3OR3VETSQYKDFN52OGXTI \
+  --name "BLOG Test Token" \
+  --unit-name TBLOG \
+  --total 1000000000 \
+  --decimals 6 \
+  --manager 6Q4S5K7FJOBSU7S6UCC6XK4AQR6W2HA6XA7AE4KX3WJPIV74BAYYD6VVKY \
+  --reserve MWBQBUKLULK6DWSHCOA4GBDZJFOGRIF7MTO5O3OR3VETSQYKDFN52OGXTI \
+  --clawback "" \
+  --freeze "" \
+  --network testnet

@@ -10,6 +10,6 @@ def generate_wallet():
 
 if __name__ == "__main__":
     wallet = generate_wallet()
-    print(f"Creator Wallet Address: {wallet['address']}")
-    print(f"Creator Wallet Mnemonic: {wallet['mnemonic']}")
+    print(f"New Wallet Address: {wallet['address']}")
+    print(f"New Wallet Mnemonic: {wallet['mnemonic']}")
     print("Save the mnemonic securely (not in repo)!")
