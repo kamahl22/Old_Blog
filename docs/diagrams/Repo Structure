@@ -1,0 +1,57 @@
+Blog/
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── predictions.py      # FastAPI endpoint for predictions
+│   │   ├── blockchain/
+│   │   │   ├── transfer_tblog.py   # Moved from scripts/
+│   │   │   ├── fund_test_wallet.py # Moved from scripts/
+│   │   │   ├── opt_in_test.py      # Moved from scripts/
+│   │   │   └── get_address.py      # Moved from scripts/
+│   │   ├── data/
+│   │   │   ├── odds.py            # Extended collect_historical_sports_data.py
+│   │   │   └── collect_nba_odds.py # Moved from scripts/
+│   │   └── models/
+│   │       └── predict.py         # ML model (placeholder)
+│   ├── tests/
+│   │   └── test_odds.py           # Unit tests for data pipeline
+│   └── requirements.txt           # Python dependencies
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── BetCard.jsx        # React component
+│   │   ├── pages/
+│   │   │   └── Home.jsx           # Homepage
+│   │   └── App.jsx                # Main React app
+│   ├── public/
+│   │   └── index.html             # HTML entry
+│   └── package.json               # Node dependencies
+├── mobile/
+│   ├── src/
+│   │   └── App.js                 # React Native app (placeholder)
+│   └── package.json               # Mobile dependencies
+├── discord_bot/
+│   ├── bot.py                    # Updated run_chatbot.py
+│   └── requirements.txt          # Bot dependencies
+├── smart_contracts/
+│   └── bet_contract.py           # PyTeal smart contract (placeholder)
+├── docs/
+│   ├── dapp_architecture.mmd     # Architecture diagram (April 19, 2025)
+│   └── setup.md                  # Setup guide
+├── data/
+│   ├── sports_data.db           # SQLite (temporary, transitioning to PostgreSQL)
+│   ├── games.csv                # Kaggle dataset
+│   ├── raw/                     # Raw API data
+│   └── blog.db                  # Legacy SQLite (to be phased out)
+├── scripts/
+│   ├── crypto/
+│   │   └── generate_wallet.py   # New wallet generation script
+│   └── data/
+│       └── collect_historical_sports_data.py # Historical data script (April 19, 2025)
+├── .github/
+│   └── workflows/
+│       └── ci.yml               # GitHub Actions CI
+├── .env                         # Secrets
+├── .gitignore                   # Ignore files
+├── README.md                    # Project overview
+└── docker-compose.yml           # Local development
